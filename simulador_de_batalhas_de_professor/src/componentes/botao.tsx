@@ -5,11 +5,13 @@
 interface IInputBotao{
     label:string
     onclick:()=>void
+    index:number
 }
-export const Botao=({label , onclick}:IInputBotao)=>{
+export const Botao=({label , onclick, index}:IInputBotao)=>{
     return(
         <>
             <button
+            key={label+index}
             onClick={onclick}
             >
             {label}
@@ -27,6 +29,7 @@ export const ListaDeBotoes = ({Labels, events}:IInputListaDeBotoes)=>{
         return (
             
                 <Botao
+                index={Labels.indexOf(label)}
                 label={label}
                 onclick={event}
                 />
@@ -37,7 +40,7 @@ export const ListaDeBotoes = ({Labels, events}:IInputListaDeBotoes)=>{
         return(
             <>
             {Labels.map(label=>{
-                handleRETBotao(label,events[Labels.indexOf(label)])
+              return (  handleRETBotao(label,events[Labels.indexOf(label)]))
             })}
             </>
         )

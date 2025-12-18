@@ -1,42 +1,161 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* FUNDO GERAL */
+body {
+  background-color: #00ff66; /* verde neon */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* TÍTULO */
+h1 {
+  margin: 2rem 0;
+  font-size: 2.8rem;
+  color: #0b3d1e;
+  text-shadow: 2px 2px 0 #7bed9f;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* CONTAINER PADRÃO (usado no AbaTexto) */
+.container {
+  background-color: #eafff1;
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 90%;
+  max-width: 700px;
+  border-radius: 25px;
+  box-shadow: 0 8px 0 #2ecc71;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* TEXTO DA ABA */
+.container p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
 }
 
-.card {
-  padding: 2em;
+/* LISTA DE BOTÕES (ListaDeBotoes) */
+.lista-botoes {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
-.read-the-docs {
-  color: #888;
+/* BOTÕES – ESTILO GRAMA */
+button {
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 25px;
+  background-color: #2ecc71;
+  color: #2ecc71;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #27ae60;
+  transition: transform 0.1s ease;
+}
+
+/* EFEITO CARTOON AO CLICAR */
+button:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #27ae60;
+}
+
+/* BOTÃO DE SAIR / VOLTAR */
+.btn-voltar {
+  background-color: #00cc55;
+}
+
+
+/* CONTAINER PRINCIPAL */
+.quadro-vitoria {
+  background-color: #ffffff;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 30px;
+  box-shadow: 0 10px 0 #2ecc71;
+  text-align: center;
+}
+
+/* LINHAS DE INFORMAÇÃO */
+.quadro-vitoria .linha {
+  background-color: #f3fff8;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+/* TEXTO (CURSIVO) */
+.quadro-vitoria p {
+  font-family: 'Comic Sans MS', 'Brush Script MT', cursive;
+  font-size: 1.4rem;
+  color: #0b3d1e;
+}
+/* CONTAINER GERAL */
+.escolha-personagem {
+  background-color: #eafff1;
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 30px;
+  box-shadow: 0 8px 0 #2ecc71;
+  text-align: center;
+}
+
+/* TÍTULO */
+.escolha-personagem h2 {
+  font-family: 'Comic Sans MS', 'Brush Script MT', cursive;
+  font-size: 2.2rem;
+  color: #0b3d1e;
+  margin-bottom: 2rem;
+}
+
+/* LISTA DE CARDS */
+.lista-personagens {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* CARD DO PERSONAGEM */
+.card-personagem {
+  background-color: #ffffff;
+  width: 220px;
+  padding: 1.5rem;
+  border-radius: 25px;
+  box-shadow: 0 6px 0 #27ae60;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+/* EFEITO CARTOON */
+.card-personagem:hover {
+  transform: translateY(-6px);
+}
+
+/* NOME */
+.card-personagem h3 {
+  font-family: 'Comic Sans MS', 'Brush Script MT', cursive;
+  font-size: 1.6rem;
+  color: #0b3d1e;
+  margin-bottom: 1rem;
+}
+
+/* ATRIBUTOS */
+.card-personagem p {
+  color: #0b3d1e;
+  font-size: 1rem;
+  margin: 0.4rem 0;
 }
